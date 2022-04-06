@@ -1,13 +1,25 @@
 package main
 
-import fiber "github.com/gofiber/fiber/v2"
+import (
+	"log"
+
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/template/django"
+)
 
 func main() {
-	app := fiber.New()
+	engine := django.New("./views", ".html")
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
+	app := fiber.New(fiber.Config{
+		Views: engine,
 	})
 
-	app.Listen(":3000")
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.Render("index", fiber.Map{
+			"title": "Hello, World!",
+		})
+	})
+
+	app.Static("/", "./views")
+	log.Fatal(app.Listen(":3000"))
 }
