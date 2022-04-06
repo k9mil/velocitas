@@ -27,20 +27,17 @@ func main() {
 			log.Fatal(err)
 		}
 
-		log.Printf("Inserting 100,000 records.")
 		start := time.Now()
 
-		for n := 0; n < 100000; n++ {
-			log.Printf("Item: %d", n)
+		for n := 0; n < 10000; n++ {
 			setTransaction(db)
 		}
 
-		log.Printf("Completed in %v", time.Since(start))
+		calculatedTime := time.Since(start).Seconds()
 
 		defer db.Close()
-
 		return c.Render("index", fiber.Map{
-			"title": "Hello, World!",
+			"time": calculatedTime,
 		})
 	})
 
