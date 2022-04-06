@@ -9,4 +9,4 @@ RUN go build -o main .
 RUN adduser -S -D -H -h /app appuser
 USER appuser
 EXPOSE 5000
-CMD ["./main"]
+CMD ["./server"]
