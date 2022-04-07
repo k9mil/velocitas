@@ -1,4 +1,8 @@
 FROM golang:1.18-alpine AS build
+
+RUN apk update && apk upgrade && \
+    apk add --no-cache git
+
 WORKDIR /tmp/app
 
 COPY go.mod .
