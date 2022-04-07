@@ -7,6 +7,7 @@ import (
 	"github.com/Pallinder/go-randomdata"
 	"github.com/dgraph-io/badger/v3"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/template/django"
 )
 
@@ -16,6 +17,8 @@ func main() {
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})
+
+	app.Use(logger.New())
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		opts := badger.DefaultOptions("/tmp/badger")

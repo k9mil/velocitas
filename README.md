@@ -4,7 +4,7 @@ Simulation of horizontal-scaling with a load-balanced multi instance architectur
 
 ## Philosophy
 
-![diagram](https://github.com/k9mil/velocitas/blob/master/demo_scaling.jpg?raw=true)
+![diagram](https://github.com/k9mil/velocitas/blob/master/demo/demo_scaling.jpg?raw=true)
 
 ## Demo
 
