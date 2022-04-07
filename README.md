@@ -1,2 +1,10 @@
-2022/04/06 20:03:08 Completed in 6.7250773s ssd
-2022/04/06 20:31:26 Completed in 1.2899287s ram 3000mhz
+# velocitas
+
+Simulation of horizontal-scaling with a load-balanced multi instance architecture built with (Golang + Fiber), Tailwind, Docker + nginx on a DigitalOcean droplet as a demo server. On index, the server simply adds 10,000 k:v pairs via BadgerDB.
+
+## Philosophy
+tbd
+
+## License
+
+Licensed under the MIT License - see the [LICENSE file](https://github.com/flash-shell/flash/blob/master/LICENSE) for more details.
