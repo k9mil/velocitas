@@ -3,7 +3,12 @@
 Simulation of horizontal-scaling with a load-balanced multi instance architecture built with (Golang + Fiber), Tailwind, Docker + nginx on a DigitalOcean droplet as a demo server. On index, the server simply adds 10,000 k:v pairs via BadgerDB.
 
 ## Philosophy
-tbd
+
+![diagram](https://github.com/k9mil/velocitas/blob/master/demo_scaling.jpg?raw=true)
+
+## Demo
+
+A demo server is available [here](http://46.101.62.143/).
 
 ## License
 

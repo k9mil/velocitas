@@ -7,7 +7,7 @@ services:
             - "3000"
         restart: "always"
         networks: 
-            - "api.network"
+            - "velocitas.network"
         deploy:
             replicas: 5
     nginx:
