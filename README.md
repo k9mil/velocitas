@@ -1,4 +1,4 @@
-# velocitas
+# 🚄💨 velocitas
 
 Velocity is an open-source horizontal scaling simulation, with a load-balanced multi instance architecture built with Golang + Fiber, Tailwind, Docker + nginx (alongside the demo being hosted on a DigitalOcean droplet). The web-app simply adds 10,000 k:v pairs via BadgerDB. This project was made to play around with docker-compose and nginx as a load balancer, but feel free to use this if you so wish.
 
@@ -29,6 +29,12 @@ Below you can see, that docker-compose assigns various colours to each docker in
 ## Demo
 
 A demo server is available [here](http://46.101.62.143/).
+
+## Usage
+
+1. Simply `git clone` this particular repository.
+2. `cd` into the downloaded folder.
+3. Run `docker-compose --compatibility up --build`
 
 ## License
 
